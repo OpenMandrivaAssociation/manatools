@@ -1,36 +1,36 @@
-.sp%define upstream_name    ManaTools
-%define upstream_version 1.1.7
-%define yui_major   7
+%define upstream_name ManaTools
+%define upstream_version 1.2.0
+%define yui_major 8
 %define internal_ver 0
 
 %global debug_package %{nil}
 
-Name:   manatools
-Version:    %perl_convert_version %{upstream_version}
-Release:    1
-Summary:    ManaTools is a collection of user-friendly system configuration tools
-License:    GPLv2+
-Group:    System/Configuration
-Url:    https://github.com/manatools/manatools
-Source0:    https://github.com/manatools/manatools/archive/%{name}-%{upstream_version}.tar.gz
+Summary:	ManaTools is a collection of user-friendly system configuration tools
+Name:		manatools
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
+License:	GPLv2+
+Group:		System/Configuration
+Url:		https://github.com/manatools/manatools
+Source0:	https://github.com/manatools/manatools/archive/%{name}-%{upstream_version}.tar.gz
 
-Obsoletes:     drakxtools
-Obsoletes:     drakconf
+#Obsoletes:	drakxtools
+Obsoletes:	drakconf
 
-BuildRequires:  gettext
-BuildRequires:  itstool
-BuildRequires:  perl(ExtUtils::CBuilder) >= 0.270.0
-BuildRequires:  perl(ExtUtils::MakeMaker) >= 6.520.0
-BuildRequires:  perl(File::ShareDir::Install)
-BuildRequires:  perl(Test::More) >= 0.820.0
-BuildRequires:  perl-devel
-Requires:   bash-completion
-Requires:   perl-yui
-Requires:   polkit
-Requires:   dnf
-Requires:   %{_lib}yui%{yui_major}-ncurses
-Requires:   %{_lib}yui%{yui_major}-mga-ncurses
-Recommends:   manatools-gui
+BuildRequires:	gettext
+BuildRequires:	itstool
+BuildRequires:	perl(ExtUtils::CBuilder) >= 0.270.0
+BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.520.0
+BuildRequires:	perl(File::ShareDir::Install)
+BuildRequires:	perl(Test::More) >= 0.820.0
+BuildRequires:	perl-devel
+Requires:	bash-completion
+Requires:	perl-yui
+Requires:	polkit
+Requires:	dnf
+Requires:	%{_lib}yui%{yui_major}-ncurses
+Requires:	%{_lib}yui%{yui_major}-mga-ncurses
+Recommends:	manatools-gui
 
 %description
 ManaTools is a collection of configuration tools that allows
@@ -48,34 +48,34 @@ on libYui. Every modules as well as ManaTools itself can be run
 using Qt, GTK+ or ncurses interface.
 
 %package qt
-Summary:    ManaTools for Qt
-Group:    System/Configuration
-Provides:   manatools-gui
-Requires:   manatools
-Requires:   manatools-common
-Requires:   %{_lib}yui%{yui_major}-qt
-Requires:   %{_lib}yui%{yui_major}-mga-qt
+Summary:	ManaTools for Qt
+Group:		System/Configuration
+Provides:	manatools-gui
+Requires:	manatools
+Requires:	manatools-common
+Requires:	%{_lib}yui%{yui_major}-qt
+Requires:	%{_lib}yui%{yui_major}-mga-qt
 
 %description qt
 manatools-qt is a meta-package containing Qt dependency for manatools.
 It allows the use of the Qt graphical interface.
 
 %package gtk
-Summary:    ManaTools for GTK+
-Group:    System/Configuration
-Provides:   manatools-gui
-Requires:   manatools
-Requires:   manatools-common
-Requires:   %{_lib}yui%{yui_major}-gtk
-Requires:   %{_lib}yui%{yui_major}-mga-gtk
+Summary:	ManaTools for GTK+
+Group:		System/Configuration
+Provides:	manatools-gui
+Requires:	manatools
+Requires:	manatools-common
+Requires:	%{_lib}yui%{yui_major}-gtk
+Requires:	%{_lib}yui%{yui_major}-mga-gtk
 
 %description gtk
 manatools-gtk is a meta-package containing GTK+ dependency for manatools.
 It allows the use of the GKT+ graphical interface.
 
 %package common
-Summary:    Shared files for Qt and GTK+ flavours of ManaTools
-Group:    System/Configuration
+Summary:	Shared files for Qt and GTK+ flavours of ManaTools
+Group:		System/Configuration
 
 %description common
 This package contains shared files used by both the Qt and GTK+ flavours of
@@ -83,10 +83,10 @@ ManaTools, which are however not strictly necessary for the ncurses flavour
 in the main manatools package.
 
 %package extra
-Summary:    ManaTools extra modules
-Group:    System/Configuration
-Requires:   manatools
-Requires:   python-yui
+Summary:	ManaTools extra modules
+Group:		System/Configuration
+Requires:	manatools
+Requires:	python-yui
 
 %description extra
 manatools-extra contains some extra modules written in python.
