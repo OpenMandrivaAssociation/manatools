@@ -17,6 +17,7 @@ Source0:	https://github.com/manatools/manatools/archive/%{name}-%{upstream_versi
 #Obsoletes:	drakxtools
 Obsoletes:	drakconf
 
+BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	itstool
 BuildRequires:	perl(ExtUtils::CBuilder) >= 0.270.0
