@@ -7,8 +7,8 @@
 
 Summary:	ManaTools is a collection of user-friendly system configuration tools
 Name:		manatools
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 License:	GPLv2+
 Group:		System/Configuration
 Url:		https://github.com/manatools/manatools
