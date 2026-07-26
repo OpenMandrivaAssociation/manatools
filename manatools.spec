@@ -1,5 +1,4 @@
 %define upstream_name ManaTools
-%define upstream_version 1.2.0
 %define yui_major 8
 %define internal_ver 0
 
@@ -7,12 +6,12 @@
 
 Summary:	ManaTools is a collection of user-friendly system configuration tools
 Name:		manatools
-Version:	%{upstream_version}
-Release:	4
+Version:	1.2.0
+Release:	5
 License:	GPLv2+
 Group:		System/Configuration
 Url:		https://github.com/manatools/manatools
-Source0:	https://github.com/manatools/manatools/archive/%{name}-%{upstream_version}.tar.gz
+Source0:	https://github.com/manatools/manatools/archive/%{name}-%{version}.tar.gz
 
 #Obsoletes:	drakxtools
 Obsoletes:	drakconf
@@ -93,7 +92,7 @@ Requires:	python-yui
 manatools-extra contains some extra modules written in python.
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%setup -q -n %{name}-%{version}
 %autopatch -p1
 
 %build
